@@ -4,6 +4,8 @@ import android.app.Notification;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Intent;
+import android.graphics.BitmapFactory;
+import android.graphics.Color;
 import android.support.v4.app.NotificationCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -29,11 +31,14 @@ public class MainActivity extends AppCompatActivity {
         String CHANNEL_ID = "my_channel_01";
         final NotificationCompat.Builder mBuilder =
                 new NotificationCompat.Builder(this, CHANNEL_ID)
-                        .setSmallIcon(R.mipmap.alarm1)
+                        .setSmallIcon(R.mipmap.ic_launcher)
+                        .setLargeIcon(BitmapFactory.decodeResource(getResources(), R.mipmap.alarm2))
                         .setContentTitle("YOU'RE AWAKE")
                         .setContentText("YOU'RE AWAKE!")
                         .setDefaults(Notification.DEFAULT_ALL)
-                        .setPriority(NotificationManager.IMPORTANCE_HIGH);
+                        .setPriority(NotificationManager.IMPORTANCE_HIGH)
+                        .setVibrate(new long[] { 1000, 1000, 1000, 1000, 1000 })
+                        .setLights(Color.RED, 3000, 3000);
         Intent resultIntent = new Intent(this, ResultActivity.class);
         PendingIntent resultPendingIntent =
                 PendingIntent.getActivity(
