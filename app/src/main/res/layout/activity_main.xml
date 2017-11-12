@@ -24,7 +24,7 @@
             android:minHeight="500dp"
             app:srcCompat="@mipmap/alarm1" />
 
-        <ToggleButton
+        <Button
             android:layout_alignParentBottom="true"
             android:id="@+id/alarm_button"
             android:layout_width="match_parent"
@@ -32,9 +32,7 @@
             android:background="#76ff03"
             android:buttonTint="#32cb00"
             android:gravity="center"
-            android:text="ToggleButton"
-            android:textOff="I AM AWAKE"
-            android:textOn="OK"
+            android:text="I AM AWAKE"
             android:typeface="serif" />
     </RelativeLayout>
 </android.support.constraint.ConstraintLayout>
