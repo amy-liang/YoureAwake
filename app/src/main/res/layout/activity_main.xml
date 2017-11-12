@@ -15,6 +15,15 @@
         tools:layout_editor_absoluteX="8dp"
         tools:layout_editor_absoluteY="8dp">
 
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="358dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="0dp"
+            android:entries="@array/spinner_songs"/>
+
         <ImageView
             android:id="@+id/imageView"
             android:layout_alignParentTop="true"
@@ -35,4 +44,5 @@
             android:text="I AM AWAKE"
             android:typeface="serif" />
     </RelativeLayout>
+
 </android.support.constraint.ConstraintLayout>

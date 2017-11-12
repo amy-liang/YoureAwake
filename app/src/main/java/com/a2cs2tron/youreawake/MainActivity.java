@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.Spinner;
 import android.media.MediaPlayer;
 
 public class MainActivity extends AppCompatActivity {
@@ -17,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
         final Button button = findViewById(R.id.alarm_button);
         final ImageView img= findViewById(R.id.imageView);
         final MediaPlayer mp = MediaPlayer.create(this, R.raw.century);
+        final Spinner sp = findViewById(R.id.spinner);
 
         button.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){

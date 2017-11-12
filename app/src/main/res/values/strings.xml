@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">You\'re Awake</string>
+
+    <string-array name="spinner_songs">
+        <item>Danger Alarm</item>
+        <item>20th Century Flute</item>
+    </string-array>
 </resources>
