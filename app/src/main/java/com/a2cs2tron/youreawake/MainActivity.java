@@ -29,6 +29,8 @@ public class MainActivity extends AppCompatActivity {
         final MediaPlayer centuryMP = MediaPlayer.create(this, R.raw.century);
         final MediaPlayer toxicMP = MediaPlayer.create(this, R.raw.toxic);
         final MediaPlayer gopherMP = MediaPlayer.create(this, R.raw.gopher);
+        final MediaPlayer spongebobMP = MediaPlayer.create(this, R.raw.spongebob);
+        final MediaPlayer gooseMP = MediaPlayer.create(this, R.raw.goose);
 
 
         String CHANNEL_ID = "my_channel_01";
@@ -62,14 +64,20 @@ public class MainActivity extends AppCompatActivity {
                 if (songTitle.equals("alarm")) {
                     mp = alarmMP;
                 }
+                else if (songTitle.equals("century")){
+                    mp = centuryMP;
+                }
                 else if (songTitle.equals("toxic")){
                     mp = toxicMP;
                 }
                 else if (songTitle.equals("gopher")){
                     mp = gopherMP;
                 }
+                else if (songTitle.equals("spongebob")){
+                    mp = spongebobMP;
+                }
                 else {
-                    mp = centuryMP;
+                    mp = gooseMP;
                 }
 
                 //Toggle Button stuff
@@ -85,7 +93,11 @@ public class MainActivity extends AppCompatActivity {
                     mp.start();
 
                     //Move/Switch image
-                    img.setImageResource(R.mipmap.alarm2);
+                    if (songTitle.equals("MR GOOSE")) {
+                        img.setImageResource(R.mipmap.alarm2g);
+                    } else {
+                        img.setImageResource(R.mipmap.alarm2);
+                    }
                     button.setText("OK");
                 }
 
