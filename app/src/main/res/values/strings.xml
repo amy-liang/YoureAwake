@@ -4,5 +4,6 @@
     <string-array name="spinner_songs">
         <item>alarm</item>
         <item>century</item>
+        <item>toxic</item>
     </string-array>
 </resources>

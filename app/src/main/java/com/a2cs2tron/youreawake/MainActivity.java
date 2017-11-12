@@ -25,6 +25,8 @@ public class MainActivity extends AppCompatActivity {
         final ImageView img= findViewById(R.id.imageView);
         final MediaPlayer alarmMP = MediaPlayer.create(this, R.raw.alarm);
         final MediaPlayer centuryMP = MediaPlayer.create(this, R.raw.century);
+        final MediaPlayer toxicMP = MediaPlayer.create(this, R.raw.toxic);
+
 
         String CHANNEL_ID = "my_channel_01";
         final NotificationCompat.Builder mBuilder =
@@ -53,7 +55,11 @@ public class MainActivity extends AppCompatActivity {
                 //select song
                 if (songTitle.equals("alarm")) {
                     mp = alarmMP;
-                } else {
+                }
+                else if (songTitle.equals("toxic")){
+                    mp = toxicMP;
+                }
+                else {
                     mp = centuryMP;
                 }
 
