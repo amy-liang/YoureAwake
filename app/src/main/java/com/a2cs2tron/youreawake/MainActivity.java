@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
         String CHANNEL_ID = "my_channel_01";
         final NotificationCompat.Builder mBuilder =
                 new NotificationCompat.Builder(this, CHANNEL_ID)
-                        .setSmallIcon(R.mipmap.ic_launcher)
+                        .setSmallIcon(R.mipmap.alarm2_small)
                         .setLargeIcon(BitmapFactory.decodeResource(getResources(), R.mipmap.alarm2))
                         .setContentTitle("YOU'RE AWAKE")
                         .setContentText("YOU'RE AWAKE!")
