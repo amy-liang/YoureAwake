@@ -28,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
         final MediaPlayer alarmMP = MediaPlayer.create(this, R.raw.alarm);
         final MediaPlayer centuryMP = MediaPlayer.create(this, R.raw.century);
         final MediaPlayer toxicMP = MediaPlayer.create(this, R.raw.toxic);
+        final MediaPlayer gopherMP = MediaPlayer.create(this, R.raw.gopher);
 
 
         String CHANNEL_ID = "my_channel_01";
@@ -63,6 +64,9 @@ public class MainActivity extends AppCompatActivity {
                 }
                 else if (songTitle.equals("toxic")){
                     mp = toxicMP;
+                }
+                else if (songTitle.equals("gopher")){
+                    mp = gopherMP;
                 }
                 else {
                     mp = centuryMP;
