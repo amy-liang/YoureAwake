@@ -12,23 +12,23 @@
         android:gravity="top"
         android:hapticFeedbackEnabled="false"
         android:orientation="vertical"
-        tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="8dp">
+        tools:layout_editor_absoluteX="39dp"
+        tools:layout_editor_absoluteY="0dp">
 
         <ImageView
             android:id="@+id/imageView"
-            android:layout_alignParentTop="true"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:minWidth="500dp"
+            android:layout_alignParentTop="true"
             android:minHeight="500dp"
+            android:minWidth="500dp"
             app:srcCompat="@mipmap/alarm1" />
 
         <ToggleButton
-            android:layout_alignParentBottom="true"
             android:id="@+id/alarm_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
             android:background="#76ff03"
             android:buttonTint="#32cb00"
             android:gravity="center"
