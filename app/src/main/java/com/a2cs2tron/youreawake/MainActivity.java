@@ -20,10 +20,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        final Spinner sp = findViewById(R.id.spinner);
         final Button button = findViewById(R.id.alarm_button);
         final ImageView img= findViewById(R.id.imageView);
-        final MediaPlayer mp = MediaPlayer.create(this, R.raw.century);
-        final Spinner sp = findViewById(R.id.spinner);
+        final MediaPlayer alarmMP = MediaPlayer.create(this, R.raw.alarm);
+        final MediaPlayer centuryMP = MediaPlayer.create(this, R.raw.century);
 
         String CHANNEL_ID = "my_channel_01";
         final NotificationCompat.Builder mBuilder =
@@ -46,6 +47,16 @@ public class MainActivity extends AppCompatActivity {
 
         button.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
+                MediaPlayer mp;
+                String songTitle = sp.getSelectedItem().toString();
+
+                //select song
+                if (songTitle.equals("alarm")) {
+                    mp = alarmMP;
+                } else {
+                    mp = centuryMP;
+                }
+
                 //Toggle Button stuff
                 if(mp.isPlaying()) {
                     //Pause music

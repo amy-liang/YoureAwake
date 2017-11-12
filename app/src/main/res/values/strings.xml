@@ -2,7 +2,7 @@
     <string name="app_name">You\'re Awake</string>
 
     <string-array name="spinner_songs">
-        <item>Danger Alarm</item>
-        <item>20th Century Flute</item>
+        <item>alarm</item>
+        <item>century</item>
     </string-array>
 </resources>
