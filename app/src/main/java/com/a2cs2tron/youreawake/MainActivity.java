@@ -59,6 +59,9 @@ public class MainActivity extends AppCompatActivity {
                     //Move/Switch image
                     img.setImageResource(R.mipmap.alarm2);
                     button.setText("OK");
+                }
+
+                if(button.getText() == "OK"){
                     int mNotificationId = 001;
                     // Gets an instance of the NotificationManager service
                     NotificationManager mNotifyMgr =
