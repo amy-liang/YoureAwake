@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.media.MediaPlayer;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -15,19 +16,25 @@ public class MainActivity extends AppCompatActivity {
 
         final Button button = findViewById(R.id.alarm_button);
         final ImageView img= findViewById(R.id.imageView);
+        final MediaPlayer mp = MediaPlayer.create(this, R.raw.century);
+
         button.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
                 //Toggle Button stuff
-                if(button.getText() == "I AM AWAKE") {
-                    //Music stuff?
-                    //Move/Switch image
-                    img.setImageResource(R.mipmap.alarm2);
-                    button.setText("OK");
-                } else {
-                    //Stop music?
+                if(mp.isPlaying()) {
+                    //Pause music
+                    mp.pause();
+
                     //Move/Switch image
                     img.setImageResource(R.mipmap.alarm1);
                     button.setText("I AM AWAKE");
+                } else {
+                    //Play music
+                    mp.start();
+
+                    //Move/Switch image
+                    img.setImageResource(R.mipmap.alarm2);
+                    button.setText("OK");
                 }
             }
         });
